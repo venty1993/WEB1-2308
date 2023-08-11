@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 별표같은 일반 특수문자는 문제가 없다.-->
+    <p>★</p>
+    <!-- 하지만 html에서 이미 사용하고있는 특수문자는 문제가 된다.-->
+    <p> 5<10=true </p>
+            <!-- 위의 식은 출력 되지만 뭔가 이상하다.-->
+            <!--아래도 출력은 되지만 태그가 닫혀버려서 가독성에 큰 문제가 생긴다.-->
+            <p> 5<10=true, 500>20=true </p>
+            <!--html에서 이미 사용된 >나 <를 사용하려면?-->
+            <p>&lt; = 여는 꺾쇠</p>
+            <p>&gt; = 닫는 꺾쇠</p>
+            <!--html에서 &는 이미 사용되고있다.-->
+            <p>패트&매트</p>
+            <!--위처럼 작성해도 크게 문제가 되진 않지만 안전을 위해선..-->
+            <p>패트&amp;매트</p>
+            <!--이렇게 적는게 좋다.-->
+            <p>&copy; = &amp;copy;</p>
+            <p>띄어쓰기 여러번 = &amp;nbsp; 여러번 쓰면 됨</p>
+            <p>띄어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;쓰기</p>
+            <!-- 모를땐 엔티티코드 검색 하면 다나온다 -->
+
+</body>
+
+</html>
