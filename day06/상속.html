@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        이 부분이 작성되면 글씨는 검은색으로 변한다.
+        상속받은 속성은 우선순위가 낮기때문에 작성위치는 상관없다.
+        .child-object {
+            color: black;
+        } */
+
+        /* 부모에게 적용한 속성이 자식요소들에게도 상속된다. */
+        .parent-object {
+            color: red;
+        }
+
+        /* 모든 속성이 상속되는건 아니고, 대체로 text 관련 속성들은 거의 상속 되는 편. */
+        /* block과 관련 속성은 거의 상속되지 않는편. */
+    </style>
+</head>
+
+<body>
+    <!-- ul.parent-object>li.child-object*4 -->
+    <ul class="parent-object">
+        <!-- 여러 줄 같이 선택 : ctrl + alt + 방향키 -->
+        <li class="child-object">자식요소1</li>
+        <li class="child-object">자식요소2</li>
+        <li class="child-object">자식요소3</li>
+        <li class="child-object">자식요소4</li>
+    </ul>
+</body>
+
+</html>

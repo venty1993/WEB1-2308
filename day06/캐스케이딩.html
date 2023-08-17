@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 같은 속성 2개가 동시에 적용되었을때 */
+        /* 일정한 규칙에 따라서 우선순위가 적용되기 때문에 */
+        /* 아래 작성은 글씨가 노란색으로 출력 된다. */
+
+        /* css 우선순위 규칙? */
+
+        /* 1. 아래 작성된게 우선순위가 높다. */
+        .text1 {
+            color: yellow;
+        }
+
+        .text1 {
+            color: pink;
+        }
+
+        /* 2.  tag < class, id */
+        .text1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        /* 3. class < id */
+
+        #text-id {
+            color: red;
+        }
+
+        .text2 {
+            color: pink;
+        }
+
+        /* 4. 부모자식간의 관계가 명확할때 우선순위가 높아진다. */
+
+        body>.text2 {
+            font-size: 40px;
+        }
+
+        .text2 {
+            font-size: 12px;
+        }
+
+
+        /* 반복되는 개체들중 일부만 다른 컨텐츠를 만들때 우선순위를 이용하면 효율적 */
+        .a-button {
+            display: block;
+            width: 160px;
+            height: 24px;
+            border-radius: 12px;
+            border: 2px solid pink;
+            font-weight: bold;
+            color: pink;
+            text-decoration: none;
+            text-align: center;
+
+        }
+
+        #버튼강조하기 {
+            border-color: red;
+            color: red;
+        }
+
+        /* 5. (주의) !important */
+
+        .text3 {
+            color: green !important;
+        }
+
+        #important-test {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="text1">테스트용 텍스트</p>
+    <p class="text2" id="text-id">id와 클래스</p>
+
+    <a href="#" class="a-button">버튼</a>
+    <a href="#" class="a-button">버튼</a>
+    <a href="#" class="a-button">버튼</a>
+    <a href="#" class="a-button" id="버튼강조하기">버튼</a>
+    <a href="#" class="a-button">버튼</a>
+    <a href="#" class="a-button">버튼</a>
+    <a href="#" class="a-button">버튼</a>
+
+    <p class="text3" id="important-test">!important는 쓰지마세요</p>
+
+    <!-- 6. html 내부에 작성되는 인라인 스타일은 -->
+    <!-- css의 id보다 우선순위가 높다. -->
+    <!-- important를 제외하고는 최고 우선순위. -->
+    <p style="color: red;">인라인 스타일</p>
+</body>
+
+</html>
