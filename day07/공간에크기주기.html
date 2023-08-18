@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .inline-block-div {
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+            display: inline-block;
+        }
+
+        .float-box {
+            width: 200px;
+            height: 200px;
+            background-color: violet;
+            float: left;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        클래스를 이용해 크기를 지정해줍니다
+    </div>
+    <div class="box">
+        한줄에 두개의 박스가 들어갈수 있을까?
+    </div>
+    <div class="box">
+        새로운 블록요소가 생기면 아래로 쌓이는 모양이 된다.
+    </div>
+    <div class="box">
+        블록요소를 일렬로 가로배치 하려면 css에서 따로 처리를 해줘야 한다
+    </div>
+
+    <!-- 처리방법은 크게 4개정도.. -->
+    <!-- 그중에 2개는 현재 쓰면 안되는 방식 -->
+    <!-- 1개는 옛 방식이며 -->
+    <!-- 최근에 쓰이는 방법은 마지막 하나가 가장 많이 쓰인다. -->
+
+    <!-- 현재 안쓰이는 2개 -->
+    <!-- 테이블, 인라인블럭을 이용한 배치 -->
+    <!-- 테이블태그는 말그대로 표를 만드는 태그이지, 구조를 만드는 태그가 아니기때문에 -->
+    <!-- 현재에 와서는 구조를 만드는 데에 쓰지 않는다. -->
+
+    <!-- 인라인블럭을 이용하는 방법 -->
+    <!-- 인라인 블럭이란? -->
+    <!-- block, inline에 대해선 이미 설명해서 알고 있을것. -->
+    <!-- inline-block이라는 속성이 추가적으로 있다. -->
+    <!-- 인라인의 특징과 블럭의 특징을 동시에 가진다. -->
+
+    <!-- 본래 인라인태그는 크기 조절이 불가능하다(컨텐츠에 따라 자동설정) -->
+    <!-- 또한 한줄에 여러개의 태그가 들어갈수 있는 성질을 갖는다. -->
+
+    <!-- 블럭태그는 한줄에 여러개의 태그가 들어갈 수 없고 -->
+    <!-- 마음대로 크기 설정이 가능하다. -->
+
+    <!-- 인라인블럭 : 크기조절 가능하면서 한줄에 여러개 작성할수 있는 속성 -->
+
+    <div class="inline-block-div">인라인블럭은 크기를 정할수있고</div>
+    <div class="inline-block-div">한줄에 여러개도 작성할 수 있다</div>
+    <br>
+    <div class="inline-block-div">인라인블록만으로 구조를 잡을떄 줄바꿈 하려면</div>
+    <div class="inline-block-div">인라인블록만으로 구조를 잡을떄 줄바꿈 하려면</div>
+
+    <div class="box">인라인블록 뒤에 일반적인 블록이 오면?</div>
+
+    <!-- 인라인블럭으로 구조를 잡는것도 좋지 않은 방법이다. -->
+
+    <!-- 3. float속성을 이용하는 방법 -->
+    <!-- float 둥둥 떠다니는 모양새, 부유하다? -->
+
+    <div class="float-box">플로트를 이용하면</div>
+    <div class="float-box">div를 가로로 배치할수 있긴 하다.</div>
+
+    <!-- 플로트를 이용하면 컨텐츠를 가로로 배치할 수 있는데 -->
+    <!-- 약간의 문제가 있다. -->
+
+    <div class="box">플로트 없는 박스</div>
+
+    <!-- 플로트를 사용할때 다음에 오는컨텐츠가 -->
+    <!-- 딸려 올라오는경우가 굉장히 많다. -->
+    <!-- 그럴때마다 매번 clear :both 라는 속성을 이용해 -->
+    <!-- 초기화를 해줘야 하고 -->
+
+    <div>
+        <div class="box">일반적인</div>
+        <div class="box">블록속성 div</div>
+    </div>
+
+    <div>
+        <div class="float-box">플로트 속성을 가진 개체를 감싸는 부모는?</div>
+    </div>
+
+    <!-- 플로트 속성은 다른 개체들과 소통을 못한다. -->
+    <!-- 부모가 볼떄 플로트속성인 자식은 없는것과 마찬가지여서 -->
+    <!-- div 안에 플로트속성을 가진 자식들만 있다면 -->
+    <!-- div의 높이는 0이된다. -->
+    <!-- 이런 문제들을 해결할 방법은 있지만 -->
+    <!-- 별로 구조적이지 못하고 비효율적이다. -->
+
+
+    <!-- 4. diplay : flex 라는 속성을 이용하는것. -->
+    <!-- 현재 가장 대중적으로 쓰이고 있는 방법이고 -->
+    <!-- 효율적인 방법이다. -->
+
+    <div class="flex-container">
+        <div class="box">여러개의</div>
+        <div class="box">블록속성</div>
+        <div class="box">div.box들</div>
+    </div>
+
+    <!-- flex는 다른 속성들과는 다르게 부모에 적용해-->
+    <!-- 자식들을 정렬하는 방법을 정해주는 속성. -->
+
+</body>
+
+</html>
