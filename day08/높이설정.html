@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        div {
+            width: 100px;
+            border: 1px solid black;
+        }
+
+        .box-px {
+            /* 높이 px값 이용 가능 */
+            height: 500px;
+        }
+
+        .box-per {
+            /* 부모요소의 높이가 고정값이 아닐떄 */
+            /* height에 %는 작동x(기준이 없어서) */
+            height: 50%;
+        }
+
+        #intro {
+            height: 100vh;
+            background-color: pink;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html에서 높이값은 내부에있는 컨텐츠에 따라서 얼마든지 바뀔수 있기때문에 값을 줄때는 신중하게 줘야한다. -->
+    <div class="box-px">고정값</div>
+    <div class="box-per">퍼센트값</div>
+
+    <div class="box-px">
+        <div class="box-per">고정값 안의 퍼센트값</div>
+    </div>
+
+    <section id="intro"></section>
+</body>
+
+</html>

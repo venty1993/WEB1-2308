@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        div {
+            border: 1px solid black;
+            height: 50px;
+        }
+
+        .box1 {
+            /* 고정값은 브라우저 크기를 조절해도 값이 변하지 않는다 */
+            width: 300px;
+        }
+
+        .box2 {
+            /* 가변값은 브라우저 크기를 조절하면 값이 함께 변한다! */
+            width: 50%;
+        }
+
+        .box-view-width {
+            width: 70vw;
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">BOX-01</div>
+    <div class="box2">BOX-02</div>
+
+
+    <div class="box2">
+        <div class="box2">내부박스의 크기는?</div>
+    </div>
+
+    <div class="box2">
+        <div class="box-view-width">vw단위란?</div>
+    </div>
+</body>
+
+</html>
