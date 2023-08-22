@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* display: none; */
+            /* none : 문서에서 안보이게 만든다. 존재 자체가 없는것으로 친다 */
+
+            /* display: block; */
+            /* block : 개체를 블록 속성으로 설정한다. */
+
+            /* display: inline-block; */
+            /* inline-block : 블록과 인라인의 성질을 동시에 가진 개체로 설정 */
+
+            /* display: inline; */
+            /* inline : 개체를 인라인으로 설정한다. */
+
+            /* display: flex; */
+            /* flex : 자식요소들을 정렬하기 위해 사용한다. 자식요소들의 크기를 유연하게 만들어줌 */
+
+            /* display: grid; */
+            /* grid : 자식요소들을 정렬하기 위해 사용한다. 격자모양 공간을 만들어 마음대로 배치 가능 */
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid #222;
+        }
+
+        .디스플레이-논 {
+            display: none;
+        }
+
+        .디스플레이-블럭 {
+            display: block;
+        }
+
+        .디스플레이-인라인블럭 {
+            display: inline-block;
+        }
+
+        .디스플레이-인라인 {
+            display: inline;
+        }
+
+        .디스플레이-플렉스 {
+            display: flex;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="디스플레이-논">논 처리</div>
+    <!-- 논처리 된 개체는 문서에 표시되지 않는다. -->
+
+    <div class="디스플레이-블럭">블럭 처리</div>
+    <div class="디스플레이-블럭">블럭 처리</div>
+    <!-- div태그의 기본 값은 display : block이기 때문에 변화 x -->
+
+    <div class="디스플레이-인라인블럭">인라인블럭 처리</div>
+    <div class="디스플레이-인라인블럭">인라인블럭 처리</div>
+    <!-- 인라인블럭 특징은 블럭처럼 크기를 정할수 있고 인라인처럼 한줄에 정렬되는것  -->
+    <!-- 하지만 글씨취급이기때문에 띄어쓰기같은게 들어가버린다. -->
+
+    <div class="디스플레이-인라인">인라인 처리</div>
+    <div class="디스플레이-인라인">인라인 처리</div>
+    <!-- 인라인개체는 크기 설정 불가능하며 컨텐츠만큼 커짐 -->
+
+    <div class="디스플레이-플렉스">
+        <div class="디스플레이-블럭">1번블럭</div>
+        <div class="디스플레이-블럭">2번블럭</div>
+    </div>
+
+</html>
