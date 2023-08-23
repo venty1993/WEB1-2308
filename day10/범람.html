@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .box {
+            width: 200px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        .normal {
+            /* 기본값으로 다시 되돌려주기 */
+            height: auto;
+        }
+
+        .overflow-hidden {
+            /* 넘친 컨텐츠를 가려서 안보이게 만든다 */
+            overflow: hidden;
+        }
+
+        .oveflow-scroll {
+            /* 넘친 컨텐츠를 확인할수 있도록 스크롤을 만들어준다. */
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum aliquid
+            deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!</div>
+        <div class="box overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!</div>
+        <div class="box oveflow-scroll">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum
+            aliquid deleniti
+            alias fuga dolores nostrum dolorem delectus. Sunt nihil assumenda neque? Ratione cupiditate voluptas quos
+            tenetur, ullam iure eligendi!</div>
+    </div>
+</body>
+
+</html>

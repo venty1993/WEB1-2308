@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .box {
+            width: 200px;
+            border: 1px solid black;
+            /* 영어는 띄어쓰기가 없으면 줄바꿈이 되지 않는다. */
+            /* 밑의 속성을 입력해 강제로 줄바꿈을 시켜 줄 수 있다. */
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">내용이 들어가면 이런식으로 작동된다 내용이 들어가면 이런식으로 작동된다 내용이 들어가면 이런식으로 작동된다 내용이 들어가면 이런식으로
+        작동된다aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        <!-- 세상에서 가장 긴 영단어. 뜻은 대충 진폐증이라고 한다 -->
+        neumonoultramicroscopicsilicovolcanoconiosis
+    </div>
+</body>
+
+</html>

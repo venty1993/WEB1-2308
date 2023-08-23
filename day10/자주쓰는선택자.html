@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체선택자 : 모든 요소에 속성을 적용시켜주는 선택자 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+        태그 : 태그 선택자
+        .이름 : 클래스 선택자
+        #이름 : 아이디 선택자
+         */
+
+        /* 선택자 선택자 : 후손 선택자 */
+        .container .inner-contents {
+            /* .container의 후손인 .inner-contents한테 속성 주기 */
+        }
+
+        /* 선택자 > 선택자 : 자식 선택자 */
+        .container>.inner-contents {
+            /* 예제에는 .container의 자식인 .inner-contents가 없기때문에 적용x */
+        }
+
+        .box>.inner-contents {
+            /* 이쪽은 적용된다. */
+        }
+
+        .inter-box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 선택자:hover : 선택자에 마우스를 올렸을때 */
+        .inter-box:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* 선택자:active : 선택자를 클릭하고있을때 */
+        .inter-box:active {
+            background-color: red;
+        }
+
+        /* pc에서는 액티브나 호버 사용문제 x */
+        /* 모바일에서는? 호버가 없다*/
+        /* pc 전용 웹 만들때만 사용한다 */
+
+
+        /* 동위선택자 */
+        /* 선택자1 + 선택자2 : 선택자1 바로 뒤에 붙어있는 선택자2 */
+        h2+p {
+            /* h2 바로 뒤에 따라오는 p태그에만 적용 */
+            color: red;
+        }
+
+        /* 선택자1 ~ 선택자2 : 선택자1 뒤에 있는 선택자2 */
+        h2~p {
+            font-weight: bold;
+        }
+
+        /* 선택자::before : 선택자의 자식 맨 앞에 가상의 요소를 하나 생성 */
+        /* 선택자::after : 선택자의 자식 맨 뒤에 가상의 요소를 하나 생성 */
+        .rect {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .rect::after {
+            /* after에는 content가 필수 */
+            /* 여기에 글씨를 넣으면 그냥 글씨로 나옴 */
+            content: "";
+
+            /* after요소는 기본적으로 inline이기때문에 디자인 요소로 사용할때는 block설정 필수 */
+            display: block;
+            margin: 0 auto;
+            width: 90px;
+            height: 5px;
+            background-color: gray;
+
+        }
+
+        .talk {
+            color: #222;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .new::after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            left: 100%;
+            top: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box">
+            <div class="inner-contents"></div>
+        </div>
+    </div>
+
+    <div class="inter-box"></div>
+
+    <p>안녕하세요?</p>
+    <h2>제목입니다</h2>
+    <p>제목뒤 단락태그입니다.</p>
+    <p>제목뒤 단락태그입니다.</p>
+    <p>제목뒤 단락태그입니다.</p>
+    <p>제목뒤 단락태그입니다.</p>
+
+    <div>
+        <p>다른 위치에 있는 단락태그</p>
+    </div>
+
+    <div class="rect">
+        기존컨텐츠
+    </div>
+    <!-- socar의 파란 마침표를 구현하기 위해서? -->
+    <h2>24시간언제나</h2>
+    <div class="파란마침표"></div>
+
+    <!-- html과 css가 분리되어 있는 만큼 오로지 디자인만을 위한 컨텐츠는 css에서 after, before 사용하면 좋다. -->
+    <!--
+        h2:after {
+            content:"";
+            display:block;
+            width:10px;
+            height:10px;
+            .
+            .
+            .
+        } 
+    -->
+    <h2>24시간 언제나</h2>
+
+    <a href="#" class="talk new">메세지</a>
+</body>
+
+</html>
