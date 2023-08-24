@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        /* 
+        
+        링크선택자
+        :link : 링크 요소
+        :visited : 방문한적이 있는 링크요소
+
+        문자 선택자
+        선택자::first-letter : "선택자"의 첫번째 글씨 
+        선택자::first-line : "선택자"의 첫번째 줄
+        선택자::selection : "선택자" 이면서 사용자가 선택(드래그등)한 요소
+
+        부정선택자
+        선택자1:not(선택자2) : "선택자1"이 "선택자2"가 아닐 때 
+        
+        */
+        a:link {
+            color: green;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        p::first-letter {
+            font-size: 24px;
+        }
+
+        p::first-line {
+            color: red;
+        }
+
+        p::selection {
+            background: pink;
+            color: #4885e1;
+        }
+
+        /* 
+        not 선택자?
+        
+        */
+        span:not(.hi) {
+            color: #4885e1;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">임시링크</a>
+    <a href="https://naver.com">네이버</a>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eveniet praesentium dignissimos! Iste
+        magnam est perferendis exercitationem molestias cum quibusdam earum mollitia suscipit, inventore dicta ad minima
+        sequi veniam blanditiis.
+    </p>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut sapiente exercitationem suscipit ex accusamus
+        aperiam quod quo tempora mollitia, unde aliquid excepturi dolorem ab rem! Libero sapiente odit culpa harum.
+    </div>
+
+    <span class="hi">안녕</span>
+    <span class="hi">안녕</span>
+    <span class="글자색얘만변경">안녕</span>
+</body>
+
+</html>
