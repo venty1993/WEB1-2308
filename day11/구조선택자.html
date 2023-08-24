@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        /* 
+        선택자:first-child : "선택자" 이면서 첫번째인 요소
+        선택자:last-child :"선택자" 이면서 마지막인 요소
+        선택자:nth-child(수열) : "선택자" 면서 "수열"번째에 해당하는 요소
+        선택자:nth-last-child(수열) : "선택자" 면서 "수열"번째에 해당하는 마지막으로부터 센 요소
+        선택자:first-of-type : "선택자"이면서 처음으로 등장하는 요소
+        선택자:last-of-type : "선택자"이면서 마지막으로 등장하는 요소
+        선택자:nth-of-type(수열) : "선택자"이면서 "수열"번째에 해당하는 요소
+        선택자:nth-last-of-type(수열) : "선택자"이면서 "수열"번째에 해당하는 마지막으로부터 센 요소
+         */
+
+        p:first-child {
+            color: red;
+        }
+
+        span:first-child {
+            color: red;
+        }
+
+        p:last-child {
+            color: green;
+        }
+
+        span:last-child {
+            color: green;
+        }
+
+        /* 위에서  span:first-child와 p:last-child는 대상이 없어 작동하지 않는다.*/
+        /* child는 형제안에서 태그와는 상관없이 몇번째 순서인지가 중요하다. */
+
+        p:first-of-type {
+            font-weight: bold;
+        }
+
+        span:first-of-type {
+            font-weight: bold;
+        }
+
+        p:last-of-type {
+            font-size: 20px;
+        }
+
+        span:last-of-type {
+            font-size: 20px;
+        }
+
+
+
+        /* p:last-of-type은 몇번째 자식인지는 상관 x */
+        /* 형제중에 마지막으로 나오는 p태그에게 적용된다. */
+
+        /* 수열? 2n =0, 2, 4, 6, 8, 10 . . . . . . . */
+        /* 2n+1 =  1, 3, 5, 7, 9 ,11 . . . . . .*/
+
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+        }
+
+        /* 수열을 이용한 체스판 디자인 */
+        ul:nth-child(2n+1)>li:nth-child(2n) {
+            background-color: #222;
+        }
+
+        ul:nth-child(2n)>li:nth-child(2n+1) {
+            background-color: #222;
+
+        }
+
+        /* 아래 두 선택자는 앞에서 부터 적용하는가 뒤에서부터 적용하는가의 차이 */
+        ul>li:nth-child(n+6) {
+            background-color: pink !important;
+        }
+
+        ul>li:nth-last-child(n+6) {
+            background-color: green !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>1번p태그</p>
+        <span>2번span태그</span>
+        <p>3번p태그</p>
+        <span>4번span태그</span>
+        <p>5번p태그</p>
+        <span>6번 span태그</span>
+    </div>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

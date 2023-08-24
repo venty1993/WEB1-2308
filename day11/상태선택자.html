@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        /* 
+        선택자:checked : "선택자"이면서 checked되어있는 요소
+            checked ? 체크박스가 선택되어있는 상태
+
+        선택자:focus : "선택자"이면서 focus 되어있는 요소
+            focus ? 인풋박스가 클릭되어있는 상태
+
+        선택자:enabled : "선택자"이면서 enabled 상태인 요소
+        선택자:disabled : "선택자"이면서 disabled 상태인 요소 
+        */
+
+        .next-box {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #222;
+        }
+
+        .focus-me:focus {
+            background-color: red;
+        }
+
+        .focus-me:focus~.next-box {
+            background-color: pink;
+        }
+
+        #chk-box:checked {
+            /* 체크박스 자체의 디자인때문에 이런 요소는 제대로 적용되지 않는다. */
+            background-color: pink;
+        }
+
+        /* :checked와 동위선택자를 같이 사용하면 재미있는 작동을 만들수 있다. */
+        #chk-box:checked+.next-box {
+            width: 100%;
+            height: auto;
+            background-color: gray;
+        }
+
+        #chk-box:checked+.next-box::after {
+            content: '체크박스가 클릭되었습니다';
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="focus-me">
+    <div class="next-box"></div>
+
+    <input type="checkbox" name="" id="chk-box">
+    <div class="next-box"></div>
+
+    <input type="text" disabled>
+</body>
+
+</html>
