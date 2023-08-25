@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        /* 
+        웹에서 사용하는 색상
+
+        1. 색깔이름 사용 : red, blue, yellow, pink 등등
+        2. HEX코드 사용 : #223344 , #19EF3C 등등
+        3. rgb() 함수 사용 : rgb(25,255,50)
+            hex = #RRGGBB 16진수의 FF = 10진수의 255
+            #FFFFFF = rgb(255, 255, 255);
+        4. hsl() 함수 사용 : hsl(색상각도, 채도, 명도) <- 거의안쓴다.
+
+
+        위의 속성들에는 투명도의 개념이 없다.
+        각각 투명함을 표현할 수 있는 방식이 있음.
+        1. 색깔이름  : transparent(투명)
+        2. HEX : #RRGGBBAA 레드, 그린, 블루, 알파(투명도값)
+        3. rgba(red, green, blue, alpha);
+        4. hsla(hue, saturation , lightness, alpha);
+
+        rgba와 hsla에서 alpha값은 0 ~ 1로 표기
+        헥스코드에서는 #FFFFFFFF 8자리로 표시할수있는데,
+        FF(16) = 255(10) = 100%
+        B0(16) = 192 = 약75%
+        80(16) = 128(10) = 50%
+
+        */
+        a {
+            color: hsl(120, 100%, 50%);
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

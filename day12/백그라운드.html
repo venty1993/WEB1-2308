@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            /* 이런식으로 작성도 가능하다. */
+            background: red;
+        }
+
+        /* 웹에서 이미지를 사용하는 방법 2개 */
+        /* img태그 이용 */
+        /* css>background-image 속성을 이용해 넣거나 */
+        .box3 {
+            width: 500px;
+            height: 500px;
+            background-image: url(48124_87125_4950.jpg);
+        }
+
+        /* img태그 background-image 차이점 */
+        /* 1. img는 하나의 개체이고, back-img는 배경일뿐이다 */
+        /* img는 글자랑 안겹치고 back-img는 글자랑 겹치는게 기본 */
+
+        /* 2. img는 이미지 크기에 맞춰 컨테이너 크기가 자동 조절되고 back-img는 배경일뿐 컨테이너 크기에는 영향을 못준다 */
+        /* 예를들어 img의 가로크기를 조절하면 세로도 자동으로 조절된다. */
+
+        /* 3. img에는 대체텍스트 기능이 있지만 back-img는 대체텍스트 기능이 없다. */
+        /* 물론 비슷하게 만들어주는 방법은 있지만 비교적 처리가 복잡하다 */
+
+        .이미지테스트 {
+            width: 200px;
+        }
+
+        .box4 {
+            background-image: url(48124_87125_4950.jpg);
+            width: 200px;
+            height: 115.67px;
+        }
+
+        /* 백그라운드 이미지에서 신경써야할 크기는 두개 */
+        /* 하나는 컨테이너의 사이즈 */
+        /* 하나는 백그라운드 이미지의 사이즈 */
+
+        .box5 {
+            background-image: url(48124_87125_4950.jpg);
+            width: 200px;
+            height: 115.67px;
+            /* 백그라운드 사이즈 에서는 이미지의 비율 유지 가능 */
+            background-size: 100%;
+        }
+
+        /* 배경과 컨테이너의 비율이 맞지 않으면 빈 공간이 생길 수 있다. */
+        .box6 {
+            width: 200px;
+            height: 300px;
+            background-image: url(48124_87125_4950.jpg);
+            background-size: 100%;
+            /* 배경 반복에 대한 속성 */
+            background-repeat: no-repeat;
+            background-color: red;
+            border: 5px solid pink;
+        }
+
+        .box7 {
+            width: 200px;
+            height: 300px;
+            background-image: url(48124_87125_4950.jpg);
+            /* 백그라운드 사이즈에 값이 한개면 x, 값을 두개 넣으면 x y */
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-color: red;
+            border: 5px solid pink;
+        }
+
+        .box8 {
+            width: 200px;
+            height: 300px;
+            background-image: url(48124_87125_4950.jpg);
+            /* 비율에 맞게 배경이미지를 늘려 빈공간이 보이지 않게 채워주는 속성값 */
+            /* cover, contain는 back-size속성.png 참고*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: red;
+            border: 5px solid pink;
+        }
+
+        .box9 {
+            width: 200px;
+            height: 300px;
+            background-image: url(48124_87125_4950.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: red;
+            border: 5px solid pink;
+            /* 백그라운드의 위치 조절 가능 */
+            background-position: center;
+
+            /* 넣을수있는 속성들 */
+            /* left, center, right, top ,center, bottom */
+            /* ex) background-position : left top; (왼쪽 위를 기준으로 보여주기) */
+            /* center 1개만 넣었을때 [ background-position : center center ]와 동일 */
+            /* background-position : 20% 50% 등 세세한 값도 설정가능 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <img src="48124_87125_4950.jpg" alt="ㅇㅈ" class="이미지테스트">
+    <div class="box4">
+        컨텐츠가 생겨야
+        <br>
+        그만큼만 개체 크기가 늘어난다
+    </div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+</body>
+
+</html>
