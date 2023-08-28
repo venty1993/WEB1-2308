@@ -11,7 +11,7 @@
         웹에서 사용하는 색상
 
         1. 색깔이름 사용 : red, blue, yellow, pink 등등
-        2. HEX코드 사용 : #223344 , #19EF3C 등등
+        2. HEX코드 사용 : #223344 , #19EF3C 등등 <----------------- 1. 헥스코드를 주로 이용한다
         3. rgb() 함수 사용 : rgb(25,255,50)
             hex = #RRGGBB 16진수의 FF = 10진수의 255
             #FFFFFF = rgb(255, 255, 255);
@@ -20,9 +20,9 @@
 
         위의 속성들에는 투명도의 개념이 없다.
         각각 투명함을 표현할 수 있는 방식이 있음.
-        1. 색깔이름  : transparent(투명)
-        2. HEX : #RRGGBBAA 레드, 그린, 블루, 알파(투명도값)
-        3. rgba(red, green, blue, alpha);
+        1. 색깔이름  : transparent(투명) <----------------- 2. 투명색 이름은 transparent다
+        2. HEX : #RRGGBBAA 레드, 그린, 블루, 알파(투명도값) <----------------- 3. 헥스코드에서도 투명도 설정이 가능하다
+        3. rgba(red, green, blue, alpha); <----------------- 4. 투명도값을 정확하게 주고싶을때 16진수 계산이 어렵다면 채택
         4. hsla(hue, saturation , lightness, alpha);
 
         rgba와 hsla에서 alpha값은 0 ~ 1로 표기

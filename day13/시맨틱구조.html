@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 시맨틱 태그의 종류 -->
+    <!-- 
+        header      : 문서의 머릿글. 로고, 네비게이션, 검색, 로그인, 회원가입 등등이 일반적으로 들어간다.
+        nav         : 메뉴를 묶을때 사용. 일반적으로 header안에 들어가지만 다른곳에도 들어갈 수 있다.
+        main        : 메인 컨텐츠를 나타내는 태그
+        section     : 구별된 영역을 만드는 태그인데, 제목이 반드시 하나이상 필요(h태그)
+        article     : 분리된 하나의 컨텐츠를 나타낼때 사용(게시글, 피드)
+        aside       : 본문 흐름과 관계 없는 사이드 영역을 나타내는 태그(주로 광고가 들어감)
+        footer      : 문서의 바닥글. 저작권, 주소, 전화번호등 기타 정보들이 들어가는 영역
+        hgroup      : 제목과 부제목을 같이 묶어줄때 사용 (사용빈도는 좀 낮은듯..)
+     -->
+    <section>
+        <hgroup>
+            <h2>해당 섹션의 제목입니다</h2>
+            <p>해당 섹션의 부제목입니다</p>
+        </hgroup>
+        <article>
+            섹션 내의 아티클요소입니다.
+        </article>
+    </section>
+
+    <div id="main-header"></div> <!-- div에 아이디를 붙여 쓰는 예전방식. 사람마다 다르게 썼다. -->
+    <header></header><!-- 모두 같은 모양으로 쓰게끔 통일된 형태 -->
+
+    <!-- 시멘틱 태그를 쓰면 어떤점이 좋을까? -->
+    <!-- 1. SEO(검색엔진 최적화)에 유리하다. -->
+    <!-- 2. 접근성 측면에서 유리하다 -->
+    <!-- 3. 유지보수가 용이하다 -->
+
+    <h2>제목제목제목</h2>
+    <p>부제목부제목부제목</p>
+
+    <div>
+        <div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <main>
+        <section>
+            <article></article>
+        </section>
+        <section>
+            <article></article>
+        </section>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+    </main>
+</body>
+
+</html>
