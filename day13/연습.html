@@ -12,6 +12,9 @@
             border: 1px solid #222;
             display: flex;
             justify-content: space-between;
+            box-sizing: border-box;
+
+            margin-bottom: 16px;
         }
 
         h1 {
@@ -54,6 +57,46 @@
             height: 36px;
             line-height: 36px;
         }
+
+        .main-wrapper {
+            width: 1000px;
+            display: flex;
+            gap: 16px;
+        }
+
+        main {
+            width: 100%;
+            /* 세로 요소의 여백을 만드는 편리한 방법 */
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        article {
+            border: 1px solid #222;
+            padding: 16px;
+            /* 중복되는 요소에 많이 사용하던 여백만드는방법. */
+            /* margin-bottom: 16px; */
+        }
+
+        /* 마지막요소 여백을 수동으로 빼줘야한다. */
+        /* article:last-child {
+            margin: 0;
+        } */
+
+        article>h2 {
+            background-color: pink;
+            padding: 8px;
+            font-weight: bold;
+        }
+
+        aside {
+            width: 240px;
+            border: solid 1px #222;
+            /* 제맘대로 수축하는녀석 안줄어들게 하려면 */
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 
@@ -80,7 +123,7 @@
         </nav>
     </header>
 
-    <div>
+    <div class="main-wrapper">
         <main>
             <article>
                 <h2>Main article</h2>
