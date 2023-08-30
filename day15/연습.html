@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            max-width: 1216px;
+            margin: 0 auto;
+            /* 섹션의 위아래여백 패딩으로 만들기 */
+            padding: 240px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 64px;
+        }
+
+        .section-heading {
+            font-size: 48px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 16px;
+        }
+
+        .section-sub-heading {
+            font-size: 20px;
+            color: #444;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 16px;
+        }
+
+        .contents>img {
+            margin-bottom: 16px;
+        }
+
+        .contents-heading {
+            font-size: 18px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .conntents-explain {
+            color: #444;
+            margin-bottom: 4px;
+        }
+
+        .content-date {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section-header">
+            <div class="section-heading-container">
+                <h2 class="section-heading">섹션의 제목</h2>
+                <p class="section-sub-heading">섹션의 부제목을 입력할 수 있습니다.</p>
+            </div>
+            <div class="slider-buttons">
+                <img src="bx_up-arrow.svg" alt="왼쪽">
+                <img src="bx_up-arrow-1.svg" alt="오른쪽">
+                <img src="ic_twotone-plus.svg" alt="더보기">
+            </div>
+        </div>
+
+        <ul class="content-wrapper">
+            <li class="contents">
+                <img src="Rectangle 76.png" alt="이미지1">
+                <h3 class="contents-heading">컨텐츠의 제목입니다</h3>
+                <p class="conntents-explain">컨텐츠의 소제목이 들어가는 영역.
+                    <br>
+                    두줄정도 작성 가능할것같다.
+                </p>
+                <p class="content-date">9999.99.99~9999.99.99</p>
+            </li>
+            <li class="contents">
+                <img src="Rectangle 76-1.png" alt="이미지1">
+                <h3 class="contents-heading">컨텐츠의 제목입니다</h3>
+                <p class="conntents-explain">컨텐츠의 소제목이 들어가는 영역.
+                    <br>
+                    두줄정도 작성 가능할것같다.
+                </p>
+                <p class="content-date">9999.99.99~9999.99.99</p>
+            </li>
+            <li class="contents">
+                <img src="Rectangle 76-2.png" alt="이미지1">
+                <h3 class="contents-heading">컨텐츠의 제목입니다</h3>
+                <p class="conntents-explain">컨텐츠의 소제목이 들어가는 영역.
+                    <br>
+                    두줄정도 작성 가능할것같다.
+                </p>
+                <p class="content-date">9999.99.99~9999.99.99</p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
